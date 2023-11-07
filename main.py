@@ -1,6 +1,8 @@
 import json
 
 default = 0 #local const
+
+
 def AddStundent(data, file_name):
     data = json.dumps(data)
     data = json.loads(str(data))
@@ -53,6 +55,7 @@ def ChooseNum(counter):
         counter += 1
         return ChooseNum(counter)
 
+
 order = ChooseNum(default)
 if order == 1:
     print(input(f'Enter'))
@@ -67,6 +70,7 @@ elif order == 2: #полностью готова кнопка 2
             print(f'Результат = {result}')
     if counter == 0:
         print(f'Студент со СНИЛС {doc_id} не найден')
+
 
 elif order == 3:
     print()
