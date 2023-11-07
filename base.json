@@ -1,0 +1,14 @@
+{
+    "student": [
+        {
+            "name": "Artem",
+            "document_id": "15968025712",
+            "exam_result": 271
+        },
+        {
+            "name": "Anton",
+            "document_id": "15968025711",
+            "exam_result": 279
+        }
+    ]
+}
