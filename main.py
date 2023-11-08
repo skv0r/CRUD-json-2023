@@ -58,7 +58,16 @@ def ChooseNum(counter):
 
 order = ChooseNum(default)
 if order == 1:
-    print(input(f'Enter'))
+    name =  str(input(f'Ввведите имя студента:\n'))
+    document = str(input(f'Введите номер СНИЛС слитно:\n'))
+    exam_result = input(f'Введите сумму баллов за экзамен:\n')
+    data = FindStudent('base.json')
+    data['student'].append({
+        'name': f'{name}',
+        'document_id': f'{document}',
+        'exam_result': exam_result
+    })
+    AddStundent(data, 'base.json')
 elif order == 2: #полностью готова кнопка 2
     counter = 0
     doc_id = str(input(f'Ввведите СНИЛС слитно\n'))
