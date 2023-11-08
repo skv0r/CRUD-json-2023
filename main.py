@@ -16,29 +16,8 @@ def FindStudent(file_name):
 
 
     
-'''   
-    
-data = {
-    'student': []
-}
 
-data['student'].append({
-    'name': 'Artem',
-    'document_id': 15968025712,
-    'exam_result': 271
-})
-data['student'].append({
-    'name': 'Anton',
-    'document_id': 15968025711,
-    'exam_result': 279
-})
 
-AddStundent(data, 'base.json')
-student = FindStudent('base.json')
-for student in student['student']:
-    if student.get('exam_result') > 275:
-        print(student)
-'''
 def ChooseNum(counter):
     try:
         if counter == 0:
@@ -100,7 +79,7 @@ elif order == 2: #полностью готова кнопка 2
         print(f'Студент со СНИЛС {doc_id} не найден')
 
 
-elif order == 3: #ready
+elif order == 3:
     counter = 0
     doc_id = str(input(f'Ввведите СНИЛС слитно\n'))
     string_student = 0
@@ -111,11 +90,11 @@ elif order == 3: #ready
         if document.get('document_id') == doc_id:
             counter +=1
             order_func = ChooseFunc(default)
-            if order_func == 1: #ready
+            if order_func == 1: 
                 new_name = input(f'Введите новое имя:\n')
                 (student['student'])[string_student-1]['name'] = new_name
                 AddStundent(student, 'base.json')
-            if order_func == 2: #ready
+            if order_func == 2: 
                 new_doc = input(f'Введите новый номер СНИЛС:\n')
                 (student['student'])[string_student-1]['document_id'] = new_doc
                 AddStundent(student, 'base.json')
@@ -129,9 +108,7 @@ elif order == 3: #ready
 elif order == 4:
     counter = 0
     string_student = 0
-    #doc_id = str(input(f'Ввведите СНИЛС слитно\n'))
-
-    doc_id = '1592570917'
+    doc_id = str(input(f'Ввведите СНИЛС слитно\n'))
 
     student = FindStudent('base.json')
     for document in student['student']:
