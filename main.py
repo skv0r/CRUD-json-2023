@@ -127,7 +127,21 @@ elif order == 3: #ready
     if counter == 0:
         print(f'Студент со СНИЛС {doc_id} не найден')
 elif order == 4:
-    print()
+    counter = 0
+    string_student = 0
+    #doc_id = str(input(f'Ввведите СНИЛС слитно\n'))
 
+    doc_id = '1592570917'
+
+    student = FindStudent('base.json')
+    for document in student['student']:
+        string_student += 1
+        if document.get('document_id') == doc_id:
+            counter +=1
+            del student['student'][string_student-1]
+            AddStundent(student, 'base.json') 
+    if counter == 0:
+        print(f'Студент со СНИЛС {doc_id} не найден')
+    
 
 
