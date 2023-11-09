@@ -62,10 +62,12 @@ def FindExamResult(doc):
     return FindStudent(doc)["exam_result"]
 
 def DeleteStudent(student):
+    string = 0
     base = ShowStudent('creds.json')
-    print(student)
-    del base[student]
-    BaseStudent(base, 'creds.json')
+    for student in base['students']:
+        string +=1
+        del base['students'][string-1]
+        BaseStudent(base, 'creds.json')
 
 def EditStudent():
     pass

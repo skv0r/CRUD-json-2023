@@ -1,19 +1,9 @@
 {
     "students": [
         {
-            "name": "Anton",
-            "document_id": "15926728001",
-            "exam_result": "197"
-        },
-        {
             "name": "Vitalii",
             "document_id": "1592918004",
             "exam_result": "217"
-        },
-        {
-            "name": "Elena",
-            "document_id": "2579016701",
-            "exam_result": "297"
         }
     ]
 }
