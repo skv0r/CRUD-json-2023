@@ -5,7 +5,7 @@ from model import AddStudent, FindExamResult, IsInt, FindStudent, EditStudent, D
 def FuncEdit(student):
     second_step = str(input(f'Напишите номер действия для управления БД:\n1 - Изменить имя\n2 - Изменить СНИЛС\n3 - Изменить баллы за экзамен\n'))
     if (IsInt(second_step) == True) and (1 <= int(second_step) <= 3):
-        return EditStudent(student)
+        EditStudent(student, second_step)
     else:
         return FuncEdit(student)
             
@@ -25,6 +25,7 @@ def FuncDo(num):
     elif int(num) == 3: #СДЕЛАТЬ
         document = str(input(f'Введите номер СНИЛС слитно:\n'))
         FuncEdit(FindStudent(document))
+        return 'Изменения успешно применены'
     elif int(num) == 4:
         document = str(input(f'Введите номер СНИЛС слитно:\n'))
         DeleteStudent(FindStudent(document))
