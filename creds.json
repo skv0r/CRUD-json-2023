@@ -31,6 +31,50 @@
                 "2021": "212",
                 "2020": "143"
             }
+        },
+        {
+            "direction": "SpaceExploring",
+            "direction_id": "05.02.01",
+            "points_2023": "299",
+            "midrange_points": {
+                "2022": "271",
+                "2021": "298",
+                "2020": "289"
+            }
+        },
+        {
+            "direction": "Technolgy Informatics",
+            "direction_id": "01.01.01",
+            "points_2023": "222",
+            "midrange_points": {
+                "2022": "301",
+                "2021": "218",
+                "2020": "254"
+            }
+        },
+        {
+            "direction": "Losing Money",
+            "direction_id": "3.2.2",
+            "points_2023": "322",
+            "midrange_points": {
+                "2022": "223",
+                "2021": "232",
+                "2020": "222"
+            }
+        }
+    ],
+    "documents": [
+        {
+            "specialdocs": {
+                "10": "VSHM Olympics",
+                "7": "Russian Bear",
+                "5": "VOSH",
+                "3": "KIT",
+                "1": "English Bulldog"
+            },
+            "autodocs": {
+                "without_exam": "Lomonosova Olympics"
+            }
         }
     ]
 }

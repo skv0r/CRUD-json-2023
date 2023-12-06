@@ -17,6 +17,7 @@ class Student:
             "exam_result": f'{exam_result}'
         }
 
+
 class Directions:
     def __init__(self, name_direction, direction_id , points_2023, year2022, year2021, year2020):
         self.data = {
@@ -31,13 +32,30 @@ class Directions:
         }
 
 
+class Docs:
+    def __init__(self, doc10, doc7, doc5, doc3, doc1, superdoc):
+        self.data = {
+            "specialdocs": {
+                "10": f'{doc10}',
+                "7": f'{doc7}',
+                "5": f'{doc5}',
+                "3": f'{doc3}',
+                "1": f'{doc1}'
+            },
+            "autodocs": {
+                "without_exam": f'{superdoc}'
+            }
+        }
+
+
 constlen = len(Student(1,1,1).data) #enter if have new data in Student
 
-def CreatingBaseStudents(database):
+def CreatingBaseStudents(file_name):
     base = Base()
     base.students["students"]
     base.students["directions"]
-    BaseStudent( base.students, f'{database}')
+    base.students["documents"]
+    BaseStudent( base.students, f'{file_name}')
 
 
 def BaseStudent(data, file_name):

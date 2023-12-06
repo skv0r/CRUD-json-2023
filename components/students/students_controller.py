@@ -32,7 +32,6 @@ def DeleteStudent(student):
     base = ShowStudent('creds.json')
     for step in range(0,len(base['students'])):
         if student == base['students'][string]:
-            print(base['students'][string])
             del base['students'][string]
         else:
             string +=1
